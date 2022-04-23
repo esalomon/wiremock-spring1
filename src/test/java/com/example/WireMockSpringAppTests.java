@@ -10,8 +10,12 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 @SpringBootTest
 class WireMockSpringAppTests {
 
+    @Autowired
+    private WebApplicationContext webApplicationContext;
+
     @Test
     void contextLoads() {
+        assertNotNull(webApplicationContext);
     }
 
 }
